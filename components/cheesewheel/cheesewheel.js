@@ -13,7 +13,6 @@ angular.module('hudditeApp')
             link: function(scope, elem, attrs) {
                 scope.spinning = false;
                 scope.showConfig = false;
-                console.log('test')
                 function randomIntFromInterval(min, max) {
                     return Math.floor(Math.random() * (max - min + 1) + min);
                 }
