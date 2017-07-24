@@ -1,0 +1,49 @@
+<div class="toolbar main-section" layout="row" layout-align="start center" layout-padding="">
+  <h2>Cheese Wheel</h2>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <button class="md-button btn-lightblue"
+              ng-click="spin()">spin</button>
+    </div>
+
+    <div class="col-xs-4">
+      <h3><span class="" ng-show="spinResult">Today's winner: {{spinResult}}</span></h3>
+    </div>
+  </div>
+
+  <div id="chease-picker-graph" class="chease-picker-graph"></div>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <button class="md-button btn-lightblue" ng-click="showConfig = !showConfig">Config</button>
+    </div>
+  </div>
+
+  <div class="clearfix"
+       ng-show="showConfig">
+    <div class="row spinner--config-row"
+         ng-repeat="slice in slices">
+      <div class="col-xs-4">
+        <input ng-model="slice.label" />
+      </div>
+
+      <div class="col-xs-1">
+        <input ng-model="slice.weight" />
+      </div>
+
+      <div class="col-xs-2">
+        <a class="md-button-utility btn-red"
+           href=""
+           ng-click="slices.splice(index, 1)">-</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <button class="md-button btn-lightblue" ng-click="slices.push({label: '', weight: 1})">Add a row</button>
+    </div>
+    <div class="row">
+      <button class="md-button btn-lightblue" ng-click="updateChart()">Update</button>
+    </div>
+  </div>
+</div>

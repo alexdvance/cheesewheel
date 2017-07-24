@@ -1,0 +1,61 @@
+.chease-picker-graph {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 960px;
+  height: 500px;
+  position: relative;
+
+  svg {
+    position: relative; //for z-index
+    width: 680px;
+    height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  path.slice{
+    stroke-width:2px;
+
+    &:hover {
+      fill: rgb(115, 23, 96) !important;
+    }
+  }
+
+  polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+  }
+}
+
+.spinner--wrapper {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  margin-top: -125px;
+  margin-left: -93px;
+  display: block;
+  transform: rotate(0deg);
+
+  &.spin {
+    animation: spin 1s infinite linear;
+  }
+}
+
+.spinner--pointer {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  margin-right: -2px;
+  top: 0;
+  bottom: 50%;
+  border-right: 2px solid #757575;
+}
+
+.spinner--config-row {
+  margin-bottom: 12px;
+}
