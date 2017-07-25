@@ -1,7 +1,4 @@
-angular.module('hudditeApp', [
-  // 'ngResource',
-  // 'ui.router',
-]);
+angular.module('hudditeApp', []);
 
 onReady = function() {
   angular.bootstrap(document, ['hudditeApp']);
