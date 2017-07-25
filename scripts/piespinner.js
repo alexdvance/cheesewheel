@@ -5,15 +5,24 @@ angular.module('hudditeApp')
 // Modified from http://bl.ocks.org/dbuezas/9306799
 .service('PieSpinner', ['$timeout', function($timeout){
     const PI = 3.14159;
+
+    // Default Config
+    var config = {
+        type: 'twister',
+        width: 680,
+        height: 450,
+        outerR: 280,
+        colors: ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"],
+        minRotation: 1080,
+        maxRotation: 7200
+    };
     var running = false;
     var boundaries = [];
     var deg = 0;
-    var config;
     var svg;
     var pie;
     var radius;
     var arc;
-    // var arcs, path, text;
     var outerArc;
 
     var key = function(d){
@@ -222,7 +231,7 @@ angular.module('hudditeApp')
 
 
     var init = function(_config) {
-        config = _config;
+        angular.extend(config, _config);
 
         setupPie();
         setupSVGElement();

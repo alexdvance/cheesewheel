@@ -12,13 +12,7 @@ angular.module('hudditeApp')
             replace: true,
             link: function(scope, elem, attrs) {
                 var pieChartConfig = {
-                    type: 'twister',
                     element: "#chease-picker-graph",
-                    width: 680,
-                    height: 450,
-                    outerR: 280,
-                    innerR: 8,
-                    colors: ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"],
                     slices: [
                         { label: 'Career', weight: 2 },
                         { label: 'Health', weight: 1 },
@@ -27,8 +21,6 @@ angular.module('hudditeApp')
                         { label: 'Social', weight: 1 },
                         { label: 'Environment', weight: 1 },
                     ],
-                    minRotation: 1080,
-                    maxRotation: 7200
                 };
 
                 PieSpinner.init(pieChartConfig);
