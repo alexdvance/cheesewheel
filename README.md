@@ -66,8 +66,6 @@ change or make a new slices array, add it to the config object, and re-init the 
 
 # API Reference
 
-- - -
-
 ## methods
 
 ### `init`
