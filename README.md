@@ -70,7 +70,7 @@ change or make a new slices array, add it to the config object, and re-init the 
 
 ### `init`
 
-This can be called to manually create a new PieSpinner instance.
+This can be called to create a new PieSpinner instance.
 
 ```javascript
 PieSpinner.init(config)
