@@ -22,6 +22,22 @@ How to use:
 * Create a config object with slices array and container element options
 * Call `PieSpinner.init(config)`
 
+    // In controller
+    var config = {
+      element: '#cheesewheel-container',
+      slices: [
+        { label: 'Record Rap Album', weight: 3 },
+        { label: 'React Tutorial', weight: 2 },
+        { label: 'Gym', weight: 1 },
+        { label: 'Bake Pie', weight: 1 },
+      ]
+    };
+        
+    PieSpinner.init(config);
+    
+    // In markup
+    <div id="cheesewheel-container"></div>
+
 
 **Spin the Wheel**
 
@@ -127,7 +143,7 @@ PieSpinner.spin()
     "end":5.585053606381854
   }
 };
-
+```
 
 
 
