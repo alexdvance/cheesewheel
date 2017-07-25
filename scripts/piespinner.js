@@ -3,7 +3,7 @@
 angular.module('hudditeApp')
 
 // Modified from http://bl.ocks.org/dbuezas/9306799
-.service('PieChart', ['$timeout', function($timeout){
+.service('PieSpinner', ['$timeout', function($timeout){
     const PI = 3.14159;
     var running = false;
     var boundaries = [];
